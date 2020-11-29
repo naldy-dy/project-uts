@@ -10,7 +10,7 @@
   			<div class="card">
   				<div class="card-header">
   					Data Kategori
-  					<a href="{{url('kategori/create')}}" class="btn btn-dark float-right"> Tambah Data</a>
+  					<a href="{{url('admin/kategori/create')}}" class="btn btn-dark float-right"> Tambah Data</a>
   				</div>
   				<div class="card-body">
   			<table class="table dataTable" id="dataTable">
@@ -27,7 +27,7 @@
                 <td>{{$loop->iteration}}</td> 
                 <td>{{$kategori->nama}}</td> 
                 <td>
-                  @include('admin.utils.delete', ['url' => url('kategori', $kategori->id)]) 
+                  @include('admin.utils.delete', ['url' => url('admin/kategori', $kategori->id)]) 
                 </td>
             </tr>
             @endforeach

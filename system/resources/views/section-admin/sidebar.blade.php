@@ -14,7 +14,7 @@
       </a>
       <hr class="sidebar-divider my-0">
       <li class="nav-item {{checkRouteActive('beranda')}}">
-        <a class="nav-link" href="{{url('beranda')}}">
+        <a class="nav-link" href="{{url('admin/beranda')}}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Beranda</span></a>
       </li>
@@ -23,19 +23,19 @@
         Fitur
       </div>
       <li class="nav-item {{checkRouteActive('konten')}}">
-        <a class="nav-link" href="{{url('konten')}}">
+        <a class="nav-link" href="{{url('admin/konten')}}">
           <i class="fa fa-rss" aria-hidden="true"></i>
           <span>Blog</span>
         </a>
       </li>
       <li class="nav-item {{checkRouteActive('buat-blog')}}">
-        <a class="nav-link" href="{{url('buat-blog')}}">
+        <a class="nav-link" href="{{url('admin/konten/create')}}">
           <i class="fa fa-plus" aria-hidden="true"></i>
           <span>Buat Blog</span>
         </a>
       </li>
       <li class="nav-item {{checkRouteActive('kategori')}}">
-        <a class="nav-link" href="{{url('kategori')}}">
+        <a class="nav-link" href="{{url('admin/kategori')}}">
           <i class="fa fa-list-alt" aria-hidden="true"></i>
           <span>Kategori</span>
         </a>
@@ -50,15 +50,12 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true"
           aria-controls="collapsePage">
           <i class="fas fa-fw fa-columns"></i>
-          <span>Pages</span>
+          <span>Aksi</span>
         </a>
         <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Example Pages</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
+            <h6 class="collapse-header">Aksi Lainya</h6>
+            <a class="collapse-item" href="{{url('logout')}}">LogOut</a>
           </div>
         </div>
       </li>

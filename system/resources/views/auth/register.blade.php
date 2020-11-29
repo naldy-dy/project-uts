@@ -27,44 +27,39 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Register</h1>
                   </div>
-                  <form>
+
+
+                  <form action="{{url('register')}}" method="post">
+                      @csrf
                     <div class="form-group">
-                      <label>First Name</label>
-                      <input type="text" class="form-control" id="exampleInputFirstName" placeholder="Enter First Name">
+                      <label>Nama</label>
+                      <input type="text" class="form-control" id="exampleInputFirstName" placeholder="Enter First Name" name="nama">
                     </div>
                     <div class="form-group">
-                      <label>Last Name</label>
-                      <input type="text" class="form-control" id="exampleInputLastName" placeholder="Enter Last Name">
+                      <label>Username</label>
+                      <input type="text" class="form-control" id="exampleInputLastName" placeholder="Enter Last Name" name="username">
                     </div>
                     <div class="form-group">
                       <label>Email</label>
                       <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"
-                        placeholder="Enter Email Address">
+                        placeholder="Enter Email Address" name="email">
                     </div>
                     <div class="form-group">
                       <label>Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
+                      <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password" name="password">
                     </div>
                     <div class="form-group">
-                      <label>Repeat Password</label>
-                      <input type="password" class="form-control" id="exampleInputPasswordRepeat"
-                        placeholder="Repeat Password">
-                    </div>
-                    <div class="form-group">
-                      <button type="submit" class="btn btn-primary btn-block">Register</button>
+                      <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-user"></i> <b>Register</b></button>
                     </div>
                     <hr>
-                    <a href="index.html" class="btn btn-google btn-block">
-                      <i class="fab fa-google fa-fw"></i> Register with Google
-                    </a>
-                    <a href="index.html" class="btn btn-facebook btn-block">
-                      <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
+                    <a href="{{url('login')}}" class="btn btn-google btn-block">
+                      <i class="fa fa-lock"></i> <b>Login</b>
                     </a>
                   </form>
+
+
+
                   <hr>
-                  <div class="text-center">
-                    <a class="font-weight-bold small" href="login.html">Already have an account?</a>
-                  </div>
                   <div class="text-center">
                   </div>
                 </div>

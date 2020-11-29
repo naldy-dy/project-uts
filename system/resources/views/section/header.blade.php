@@ -17,13 +17,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{url('index')}}">Beranda</a>
+                            <a class="nav-link" href="{{url('index')}}"><i class="fa fa-home"></i> Beranda</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Info</a>
+                            <a class="nav-link" href="index.html"><i class="fa fa-info"></i> Info</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Faq</a>
+                            <a class="nav-link" href="{{url('login')}}"><i class="fa fa-lock"></i> Login</a>
                         </li>
 
                     </ul>

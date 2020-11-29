@@ -12,11 +12,12 @@
   					Detail Blog <hr>
   				</div>
           <h3>{{$blog->judul}}</h3>
-          <strong>Deskripsi</strong>
+          <p><i class="fa fa-clock" aria-hidden="true"></i> Rilis :{{$blog->created_at}}</p><hr>
+          <h4 style="font-weight: bold;">Deskripsi</h4>
           <p>
             {!!nl2br($blog->deskripsi)!!}
           </p>
-          <strong>Konten</strong> <hr>
+          <h4 style="font-weight: bold;">Konten</h4> 
           <p>
             {!!nl2br($blog->konten)!!}
           </p>

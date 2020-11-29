@@ -30,30 +30,36 @@
              <!-- block -->
                 <div class="item">
                     <div class="row shadow">
-                        <div class="col-lg-3">
+                        <div class="col-md-9">
+                         <h1 class="ml-3" style="font-weight: bold;">
+                                {{ucwords($blog->judul)}}
+                                </div>
+                           </h1> 
+                        <div class="col-lg-12">
                             <a href="#blog-single">
                                 <img class="card-img-bottom pt-4 d-block radius-image" src="{{url('public')}}/assets/images/p3.jpg"
                                     alt="Card image cap">
                             </a>
                         </div>
                         <div class="col-lg-9 blog-details align-self p-3 mt-lg-0 mt-sm-5 mt-4">
-                            <a href="{{url('blog')}}" class="blog-desc-big">Disni adalah judul blog penulis
-                            </a>
-                            <p>Ini adalah diskripsi penulis dari latar isi blog Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                           
+                            <p>
+                                 {!!nl2br($blog->konten)!!}
+                            </p>
                             <div class="author align-items-center mt-4 mb-1">
                                 <a href="#author">Johnson smith</a> in <a href="#url">Design</a>
                             </div>
                             <ul class="blog-meta">
                                 <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> April 13, 2020 </span>
+                                    <span class="meta-value">
+                                       <i class="fa fa-clock-o" aria-hidden="true"></i> 
+                                        {{$blog->created_at}} </span>
                                 </li>
                                 <li class="meta-item blog-students">
                                     <span class="meta-value"> 6min read</span>
+                                </li>
+                                <li class="meta-item blog-students">
+                                    <b class="meta-value">Tags: </b> <button class="btn btn-sm" style="background-color: #ffccff; border-radius: 10px; color: #fff"> {{ucwords($blog->kategori)}}</button> 
                                 </li>
                             </ul> <hr>
                     </div>

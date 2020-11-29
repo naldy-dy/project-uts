@@ -7,7 +7,7 @@
   		Buat Blog <hr>
   	</div>
   	<div class="card-body">
-  		<form action="{{url('konten')}}" method="post">
+  		<form action="{{url('admin/konten')}}" method="post">
   			@csrf
         <div class="form-group">
           <label class="label-control">Kategori Blog</label>

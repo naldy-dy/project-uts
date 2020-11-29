@@ -25,15 +25,17 @@
               <div class="col-lg-12">
                 <div class="login-form">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Login</h1>
+                    <h1 class="h4 text-gray-900 mb-4" style="font-weight: bold"> Login <hr></h1>
                   </div>
-                  <form class="user">
+                  <form action="{{url('login')}}" method="post">
+                    @csrf
                     <div class="form-group">
+                    @include('admin.utils.notif')
                       <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"
-                        placeholder="Enter Email Address">
+                        placeholder="Enter Email Address" name="email">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
+                      <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password" name="password">
                     </div>
                     <div class="form-group">
                       <div class="custom-control custom-checkbox small" style="line-height: 1.5rem;">
@@ -43,20 +45,14 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <a href="index.html" class="btn btn-primary btn-block">Login</a>
+                      <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-lock"></i> <b>Login</b></button>
                     </div>
+                     </form>
                     <hr>
-                    <a href="index.html" class="btn btn-google btn-block">
-                      <i class="fab fa-google fa-fw"></i> Login with Google
+                    <a  href="{{url('register')}}" class="btn btn-google btn-block">
+                      <i class="fa fa-user"></i> Daftar Akun
                     </a>
-                    <a href="index.html" class="btn btn-facebook btn-block">
-                      <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                    </a>
-                  </form>
-                  <hr>
-                  <div class="text-center">
-                    <a class="font-weight-bold small" href="register.html">Create an Account!</a>
-                  </div>
+                  
                   <div class="text-center">
                   </div>
                 </div>

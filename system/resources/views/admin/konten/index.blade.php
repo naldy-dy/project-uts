@@ -10,27 +10,30 @@
   			<div class="card">
   				<div class="card-header">
   					Data Konten
-  					<a href="{{url('konten/create')}}" class="btn btn-primary btn-sm float-right"><i class="fa fa-plus"></i> Buat Blog</a>
+  					<a href="{{url('admin/konten/create')}}" class="btn btn-primary btn-sm float-right"><i class="fa fa-plus"></i> Buat Blog</a>
   				</div>
   				<div class="card-body">
   			<table class="table dataTable" id="dataTable">
   				<thead>
   				<tr>
   					<th>No</th>
-  					<th>Aksi</th>
   					<th>Judul Blog</th>
   					<th>Dibuat</th>
+  					<th width="200px;">Aksi</th>
   				</tr>
   				</thead>
   				<tbody>
   				@foreach($list_blog as $blog)
 	  				<tr>
 	  					<td>{{$loop->iteration}}</td>
-	  					<td>
-	  						<a href="{{url('blog', $blog->id)}}" class="btn btn-sm btn-dark"><i class="fa fa-info"></i></a>
-	  					</td>
 	  					<td>{{$blog->judul}}</td>
 	  					<td>{{$blog->created_at}}</td>
+	  					<td class="row">   
+	  						<a href="{{url('admin/konten', $blog->id)}}" class="btn btn-sm col-md-2 mr-2 btn-dark"><i class="fa fa-info"></i></a>
+                <a href="{{url('admin/konten', $blog->id)}}/edit" class="btn btn-sm col-md-2 btn-warning"><i class="fa fa-edit"></i></a>
+
+               @include('admin.utils.delete', ['url' => url('admin/konten', $blog->id)]) 
+	  					</td>
 	  				</tr>
   				@endforeach
   				</tbody>
@@ -40,9 +43,6 @@
   		</div>				
   	</div>
   </div>
-
-
-
 
 
   <!-- end contten -->

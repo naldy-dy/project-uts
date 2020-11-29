@@ -16,14 +16,13 @@ use App\Models\Kategori;
  	function store(){
  		$kategori = new Kategori;
  		$kategori->nama = request('nama');
-
  		$kategori->save();
- 		return redirect('kategori');
+ 		return redirect('admin/kategori');
  	}
 
  	function destroy(Kategori $kategori){
 		$kategori->delete();
-		return redirect('kategori')->with('danger', 'Data Berhasil Dihapus');
+		return redirect('admin/kategori')->with('danger', 'Data Berhasil Dihapus');
 	}
 
 
