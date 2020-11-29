@@ -30,6 +30,7 @@
             <div class="row">
 
              <!-- Copy dari sini -->
+            @foreach($list_blog as $blog)
                 <div class="item mt-3">
                     <div class="row shadow">
                         <div class="col-lg-6">
@@ -39,27 +40,10 @@
                             </a>
                         </div>
                         <div class="col-lg-6 blog-details align-self pt-3 mt-lg-0 mt-sm-5 mt-4">
-                            <a href="{{url('blog')}}" class="blog-desc-big">Disni adalah judul blog penulis
+                            <a href="{{url('detail', $blog->id)}}" class="blog-desc-big">{{$blog->judul}}
                             </a>
-                            <p>Ini adalah diskripsi penulis dari latar isi blog Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            <br> <br>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            <p>
+                                {{$blog->deskripsi}}
                             </p>
                             <div class="author align-items-center mt-4 mb-1">
                                 <a href="#author">Johnson smith</a> in <a href="#url">Design</a>
@@ -75,105 +59,10 @@
                         </div>
                     </div>
                 </div>
+            @endforeach
                 <!-- Copy sampai sini -->
 
                 <!-- Copy dari sini -->
-                <div class="item mt-3">
-                    <div class="row shadow">
-                        <div class="col-lg-6">
-                            <a href="{{url('blog')}}">
-                                <img class="card-img-bottom d-block pt-3 radius-image" src="{{url('public')}}/assets/images/p3.jpg"
-                                    alt="Card image cap">
-                            </a>
-                        </div>
-                        <div class="col-lg-6 blog-details align-self pt-3 mt-lg-0 mt-sm-5 mt-4">
-                            <a href="{{url('blog')}}" class="blog-desc-big">Disni adalah judul blog penulis
-                            </a>
-                            <p>Ini adalah diskripsi penulis dari latar isi blog Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            <br> <br>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                            <div class="author align-items-center mt-4 mb-1">
-                                <a href="#author">Johnson smith</a> in <a href="#url">Design</a>
-                            </div>
-                            <ul class="blog-meta">
-                                <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> April 13, 2020 </span>
-                                </li>
-                                <li class="meta-item blog-students">
-                                    <span class="meta-value"> 6min read</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Copy sampai sini -->
-
-
-                <!-- Copy dari sini -->
-                <div class="item mt-3">
-                    <div class="row shadow">
-                        <div class="col-lg-6">
-                            <a href="{{url('blog')}}">
-                                <img class="card-img-bottom d-block pt-3 radius-image" src="{{url('public')}}/assets/images/p3.jpg"
-                                    alt="Card image cap">
-                            </a>
-                        </div>
-                        <div class="col-lg-6 blog-details align-self pt-3 mt-lg-0 mt-sm-5 mt-4">
-                            <a href="{{url('blog')}}" class="blog-desc-big">Disni adalah judul blog penulis
-                            </a>
-                            <p>Ini adalah diskripsi penulis dari latar isi blog Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            <br> <br>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                            <div class="author align-items-center mt-4 mb-1">
-                                <a href="#author">Johnson smith</a> in <a href="#url">Design</a>
-                            </div>
-                            <ul class="blog-meta">
-                                <li class="meta-item blog-lesson">
-                                    <span class="meta-value"> April 13, 2020 </span>
-                                </li>
-                                <li class="meta-item blog-students">
-                                    <span class="meta-value"> 6min read</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Copy sampai sini -->
-
         
 
             </div>

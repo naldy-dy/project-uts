@@ -26,7 +26,7 @@
       
       <div class="container-fluid">
 
-        <h1>INIKONTEN</h1>
+     @yield('content')
 
       </div>
 
@@ -45,6 +45,21 @@
   </a>
 
  @include('section-admin.js')
+
+
+  <script src="{{url('public')}}/plugins/datatables/jquery.dataTables.min.js/"></script>
+    <script src="{{url('public')}}/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="{{url('public')}}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="{{url('public')}}/plugins/datatables-responsive/js/dataTables.bootstrap4.min.js"></script>
+   <script>
+   $(".table-datatable").DataTable();
+  </script>
+    <script>
+    $(document).ready(function () {
+      $('#dataTable').DataTable(); // ID From dataTable 
+      $('#dataTableHover').DataTable(); // ID From dataTable with Hover
+    });
+  </script>
 </body>
 
 </html>
